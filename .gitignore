@@ -1,0 +1,23 @@
+# IntelliJ IDEA
+.idea
+*.iml
+*.ipr
+*.iws
+classes
+out
+
+# Maven
+target
+release.properties
+pom.xml.*
+
+# Gradle
+.gradle
+build
+
+# Other
+.DS_Store
+Thumbs.db
+*~
+*.swp
+tmp
