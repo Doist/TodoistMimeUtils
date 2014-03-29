@@ -427,6 +427,10 @@ public class MimeUtils {
 	 * @exception java.io.IOException if an I/O error occurs while reading the input stream.
 	 */
 	public static String guessContentTypeFromStream(InputStream is) throws IOException {
+		if(!is.markSupported())
+			return null;
+
+		is.mark(64);
 		int c1 = is.read();
 		for(int i = 0; i < 63 && c1 == 32; i++) // Manually trim the beginning, up to 64 characters. 32 is space.
 			c1 = is.read();
@@ -445,6 +449,7 @@ public class MimeUtils {
 		int c14 = is.read();
 		int c15 = is.read();
 		int c16 = is.read();
+		is.reset();
 
 		if(c1 == 0xCA && c2 == 0xFE && c3 == 0xBA && c4 == 0xBE)
 			return "application/java-vm";
