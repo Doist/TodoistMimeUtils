@@ -188,6 +188,7 @@ public class MimeUtils {
 		add("application/x-xfig", "fig");
 		add("application/xhtml+xml", "xhtml");
 		add("audio/3gpp", "3gpp");
+		add("audio/aac", "aac");
 		add("audio/amr", "amr");
 		add("audio/basic", "snd");
 		add("audio/midi", "mid");
@@ -251,6 +252,7 @@ public class MimeUtils {
 		add("image/x-xbitmap", "xbm");
 		add("image/x-xpixmap", "xpm");
 		add("image/x-xwindowdump", "xwd");
+		add("image/webp", "webp");
 		add("model/iges", "igs");
 		add("model/iges", "iges");
 		add("model/mesh", "msh");
@@ -326,6 +328,7 @@ public class MimeUtils {
 		add("video/vnd.mpegurl", "mxu");
 		add("video/x-la-asf", "lsf");
 		add("video/x-la-asf", "lsx");
+		add("video/x-matroska", "mkv");
 		add("video/x-mng", "mng");
 		add("video/x-ms-asf", "asf");
 		add("video/x-ms-asf", "asx");
@@ -335,6 +338,7 @@ public class MimeUtils {
 		add("video/x-ms-wvx", "wvx");
 		add("video/x-msvideo", "avi");
 		add("video/x-sgi-movie", "movie");
+		add("video/webm", "webm");
 		add("x-conference/x-cooltalk", "ice");
 		add("x-epoc/x-sisx-app", "sisx");
 	}
@@ -422,11 +426,13 @@ public class MimeUtils {
 	 * there are many nonstandard extensions. Direct inspection of the bytes to determine the content type is often more
 	 * accurate than believing the content type claimed by the <code>http</code> server.
 	 *
-	 * @param is An input stream.
+	 * An {@link InputStream} with support for marking is required. It will be read up to 64 bytes.
+	 *
+	 * @param is An input stream with mark support.
 	 * @return A guess at the content type, or <code>null</code> if none can be determined.
 	 * @exception java.io.IOException if an I/O error occurs while reading the input stream.
 	 */
-	public static String guessContentTypeFromStream(InputStream is) throws IOException {
+	public static String guessMimeTypeFromInputStream(InputStream is) throws IOException {
 		if(!is.markSupported())
 			return null;
 
