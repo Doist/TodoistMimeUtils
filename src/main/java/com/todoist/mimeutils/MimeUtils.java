@@ -123,9 +123,12 @@ public class MimeUtils {
 		add("application/x-gnumeric", "gnumeric");
 		add("application/x-go-sgf", "sgf");
 		add("application/x-graphing-calculator", "gcf");
+		add("application/x-bzip2", "bz2");
 		add("application/x-gtar", "gtar");
 		add("application/x-gtar", "tgz");
 		add("application/x-gtar", "taz");
+		add("application/x-gzip", "gz");
+		add("application/x-7z-compressed", "7z");
 		add("application/x-hdf", "hdf");
 		add("application/x-ica", "ica");
 		add("application/x-internet-signup", "ins");
