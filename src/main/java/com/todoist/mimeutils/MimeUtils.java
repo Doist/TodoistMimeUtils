@@ -412,10 +412,12 @@ public class MimeUtils {
 	 * @return The extension or null if there is none.
 	 */
 	public static String getExtension(String filename) {
+		int firstCharInExtension = filename.lastIndexOf('.') + 1;
+		if(firstCharInExtension == 0)
+			return null;
 		int lastCharInExtension = filename.lastIndexOf('#');
 		if(lastCharInExtension < 0)
 			lastCharInExtension = filename.length();
-		int firstCharInExtension = filename.lastIndexOf('.') + 1;
 		String extension = null;
 		if(firstCharInExtension > filename.lastIndexOf('/'))
 			extension = filename.substring(firstCharInExtension, lastCharInExtension);
