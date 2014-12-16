@@ -219,6 +219,7 @@ public class MimeUtils {
         add("audio/x-realaudio", "ra");
         add("audio/x-scpls", "pls");
         add("audio/x-sd2", "sd2");
+        add("audio/wav", "wav");
         add("audio/x-wav", "wav");
         add("image/bmp", "bmp");
         add("image/gif", "gif");
