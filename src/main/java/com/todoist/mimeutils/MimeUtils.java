@@ -27,10 +27,12 @@ public class MimeUtils {
         //
         // and "active" MIME types (due to potential security issues).
 
+        add("application/aftereffects", "aep");
         add("application/andrew-inset", "ez");
         add("application/dsptype", "tsp");
         add("application/futuresplash", "spl");
         add("application/hta", "hta");
+        add("application/illustrator", "ai");
         add("application/mac-binhex40", "hqx");
         add("application/mac-compactpro", "cpt");
         add("application/mathematica", "nb");
@@ -44,6 +46,7 @@ public class MimeUtils {
         add("application/rar", "rar");
         add("application/rdf+xml", "rdf");
         add("application/rss+xml", "rss");
+        add("application/sketch", "sketch");
         add("application/zip", "zip");
         add("application/vnd.android.package-archive", "apk");
         add("application/vnd.cinderella", "cdy");
