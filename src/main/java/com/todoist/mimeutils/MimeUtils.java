@@ -72,6 +72,7 @@ public class MimeUtils {
         add("application/vnd.ms-excel", "xlt");
         add("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "xlsx");
         add("application/vnd.openxmlformats-officedocument.spreadsheetml.template", "xltx");
+        add("application/vnd.ms-outlook", "msg");
         add("application/vnd.ms-powerpoint", "ppt");
         add("application/vnd.ms-powerpoint", "pot");
         add("application/vnd.ms-powerpoint", "pps");
