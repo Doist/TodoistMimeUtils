@@ -444,11 +444,11 @@ public class MimeUtils {
      */
     public static String getExtension(String filename) {
         int firstCharInExtension = filename.lastIndexOf('.') + 1;
-        if (firstCharInExtension == 0) {
+        if (firstCharInExtension == 0 || firstCharInExtension == filename.length()) {
             return null;
         }
         int lastCharInExtension = filename.lastIndexOf('#');
-        if (lastCharInExtension < 0) {
+        if (lastCharInExtension < firstCharInExtension) {
             lastCharInExtension = filename.length();
         }
         String extension = null;
